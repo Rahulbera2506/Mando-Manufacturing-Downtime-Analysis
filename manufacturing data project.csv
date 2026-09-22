@@ -1,0 +1,43 @@
+CREATE TABLE manufacturing (
+production_date	date,
+machine_id	varchar(50),
+machine_type varchar(50),
+shift varchar(50),
+units_produced	int,
+machine_failure	int,
+downtime_minutes int,
+defective_units	int
+);	
+
+drop table manufacturing;
+select * from manufacturing;
+
+
+-- how many machine are operation ?
+select count(distinct machine_id)as total_machine 
+from manufacturing;
+
+-- how many different shifts are there in the manufacturing plant?
+select count(distinct shift ) as shift_time
+from manufacturing;
+
+-- What is the average machine downtime in minutes?
+select avg(downtime_minutes) as avg_downtime
+from manufacturing;
+
+-- How many total defective units were produced during the entire period?
+select sum(defective_units) as total_defective_units
+from manufacturing;
+
+-- Which machine type produced the highest number of defect units?
+select machine_type,
+       sum(defective_units) as total_defect_units
+	   from manufacturing
+	   group by machine_type
+	   order by total_defect_units desc;
+
+ 
+ select machine_type,
+       sum(units_produced) as total_produced
+	   from manufacturing
+	   group by machine_typ
