@@ -174,8 +174,8 @@ This project helped me practice the complete Data Analytics workflow, from under
 
 ## 👨‍💻 Author
 
-**Rahul B.**
+**Rahul Bera**
 
-Aspiring Data Analyst
+Aspiring AI powered Data Analyst
 
 Skills: SQL | Power BI | Excel | Power Query | PostgreSQL | Python
